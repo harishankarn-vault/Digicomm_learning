@@ -1,0 +1,76 @@
+/*	Find where USB B connection is connected with board via UART/USART
+ *	Board : STM32F429ZI
+ * 	This USB communicates via Virtual COMM Port through USART1
+ * 	USART1 address : 0x4001 1000 - 0x4001 13FF
+ * 	TX_Port: Port A
+ * 	TX_Pin: 9
+ *
+ *	RX_Port: Port A
+ *	RX_Pin: 10
+ *
+ *	Address Bus : APB2 90 MHZ @ USART1
+ *
+ * 	USART1 uses GPIOA : PA09(TX) PA10(RX)
+ * 	So,
+ * 		- need to map with alternate function mapping in Data sheet
+ * 		- find type of alternate function (AF7)
+ */
+
+
+
+#include "stm32f4xx.h"
+
+#define GPIOAEN   			(1U<<0) // Enable clock for GPIOA
+#define USART1EN  			(1U<<4)	// USART1  @ GPIOA : PA09 & PA10
+
+int main(void){
+
+	while(1)
+	{
+
+	}
+}
+
+void usart2_tx_init(void){
+	/************Configure USART GPIO pins***********/
+	/*Enable clock access to GPIOA*/
+	RCC->AHB1ENR |= GPIOAEN;
+
+	/*Set PA09 & PA10 to alternate function mode*/
+	GPIOA->MODER &= ~(1U<<18);
+	GPIOA->MODER |= (1U<<19);
+
+	/*Set PA09 & PA10 to alternate function type to UART_TX (AF7)*/
+	/* Notes :
+	 * 	- Pin number corresponds to x in AFRHx
+	 * 	- All pin 1 are in AFRL1
+	 * 	- All pin 9 are in AFRH9
+	 */
+
+	/* Note : There is not AFRL/AFRH in ST header, instead
+	 * AFR[0] = AFRL
+	 * AFR[1] = AFRH
+	 */
+
+	GPIOA->AFR[1] &= ~(0xFU<<4);
+	GPIOA->AFR[1] |=  (0x7U<<4);
+
+
+
+	/************Configure USART Module***********/
+	/*Enable clock access to USART2*/
+	RCC->APB2ENR |= USART1EN;
+
+	/*Configure USART Baud rate*/
+
+	/*Configure transfer direction*/
+	/*Enable USART module*/
+}
+
+static void uart_set_baudrate(USART_Typedef *USARTx,uint32_t PeriphCLK, uint32_t BaudRate){
+
+}
+
+static uint16_t compute_USART_dic(uint32_t PeriphCLK, uint32_t BaudRate){
+	return ((PeriphCLK + (BaudRate/2U))/BaudRate);
+}

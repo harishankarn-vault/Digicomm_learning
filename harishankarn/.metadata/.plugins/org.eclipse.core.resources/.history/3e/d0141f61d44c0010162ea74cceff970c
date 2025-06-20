@@ -1,0 +1,44 @@
+// Find where the led is connected to the board in schematic
+// Board : STM32F429ZI
+// Port: Port A
+// Pin: 0
+// Address Bus : AHB1 180 MHZ @ GPIO - A
+
+#include "stm32f4xx.h"
+
+#define GPIOGEN  			(1U<<6)
+#define GPIOAEN  			(1U<<0)
+
+#define PIN13				(1U<<13)
+#define PIN0				(1U<<0)
+
+#define BTN_PIN				PIN0
+#define LED_PIN 			PIN13
+
+
+int main(void){
+	// Enable clock access to GPIO A and C
+	RCC->AHB1ENR |= GPIOGEN;
+	RCC->AHB1ENR |= GPIOAEN;
+
+	// Set PG13 as OUTPUT pin
+	GPIOG->MODER |= (1U<<26); 	// sets only Bit 26 to one
+	GPIOG->MODER &= ~(1U<<27);	// sets only Bit 27 to zero
+
+	// Set PG13 as INPUT pin
+	GPIOA->MODER &= ~(1U<<0);
+	GPIOA->MODER &= ~(1U<<1);
+
+	while(1)
+	{
+		// Check if BUTTON is pressed
+		if (GPIOA->IDR & BTN_PIN){
+			// Turns on
+			GPIOG->BSRR = LED_PIN;
+		}
+		else {
+			// Turns off
+			GPIOG->BSRR = (1U<<13);
+		}
+	}
+}

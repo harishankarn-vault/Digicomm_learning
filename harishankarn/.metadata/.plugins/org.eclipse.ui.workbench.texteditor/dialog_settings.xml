@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="USART2"/>
+		<item value="Fck"/>
+		<item value="USART_Typedef"/>
+		<item value="stm32f429"/>
+		<item value="STM32F429"/>
+		<item value="STM32F429ZI"/>
+		<item value="GPIOG"/>
+		<item value="AHB1"/>
+		<item value="GPIOB"/>
+		<item value="IOPCEN"/>
+		<item value="APB2EN_R_OFFSET"/>
+		<item value="RCC_APB2EN_R"/>
+		<item value="GPIOC"/>
+		<item value="AHB2PERIPH"/>
+		<item value="APB2PERIPH"/>
+	</list>
+	<list key="replacehistory">
+		<item value="SYS_FREQ"/>
+		<item value="GPIOC"/>
+		<item value="APB2"/>
+		<item value="GPIOG"/>
+		<item value="GPIOBEN"/>
+		<item value="AHB1EN_R_OFFSET"/>
+		<item value="RCC_AHB1EN_R"/>
+		<item value="GPIOB"/>
+		<item value="AHB1PERIPH"/>
+		<item value="AHB2PERIPH"/>
+		<item value="GPIOC_CRH_R"/>
+		<item value="CRH"/>
+	</list>
+</section>

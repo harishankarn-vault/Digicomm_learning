@@ -1,0 +1,29 @@
+2025-06-17 08:47:14,695 [INFO] WebApp:194 - Connection lost
+2025-06-17 09:08:58,016 [INFO] WebApp:191 - Connection restablished
+2025-06-17 09:13:34,679 [INFO] WebApp:194 - Connection lost
+2025-06-17 09:13:35,249 [INFO] WebApp:191 - Connection restablished
+2025-06-17 09:13:36,824 [INFO] WebApp:194 - Connection lost
+2025-06-17 09:13:40,929 [INFO] WebApp:191 - Connection restablished
+2025-06-17 14:34:18,920 [INFO] MainUpdater:2872 - connection check result : 10
+2025-06-17 14:34:19,423 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2025-06-17 14:34:19,431 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2025-06-17 14:34:19,435 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2025-06-17 14:34:23,787 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2025-06-17 14:34:23,789 [INFO] DetailPanel:341 - Set advertising image to /Users/harishankar/STM32Cube/Repository//en.summit-h1-25-promotion.jpg
+2025-06-17 14:34:31,076 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2025-06-17 14:34:31,762 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2025-06-17 14:34:31,764 [INFO] DetailPanel:341 - Set advertising image to /Users/harishankar/STM32Cube/Repository//en.summit-h1-25-promotion.jpg
+2025-06-17 14:34:31,820 [INFO] DbBoards:642 - Loading board mini-images...
+2025-06-17 14:34:31,986 [ERROR] DbBoards:659 - Image file not found for board B-WBA5M-WPAN: /Users/harishankar/.stmcufinder/plugins/mcufinder//mcu//boards_images/B-WBA5M-WPAN.jpg
+2025-06-17 14:34:35,483 [INFO] DbBoards:665 - Loaded 210 board mini-images
+2025-06-17 14:35:51,688 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2025-06-17 14:35:51,726 [INFO] ApiDb:448 - Save user favorites file /Users/harishankar/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2025-06-17 14:35:51,727 [INFO] ApiDb:452 - User favorites MCUs=[]
+2025-06-17 14:35:51,771 [INFO] ApiDb:448 - Save user favorites file /Users/harishankar/.stm32cubeide/favorites.boards.txt: 1 item(s)
+2025-06-17 14:35:51,772 [INFO] ApiDb:452 - User favorites Boards=[STM32F407G-DISC1]
+2025-06-17 16:58:32,729 [INFO] WebApp:194 - Connection lost
+2025-06-17 16:58:36,569 [INFO] WebApp:191 - Connection restablished
+2025-06-17 16:58:55,968 [INFO] WebApp:194 - Connection lost
+2025-06-17 17:01:50,836 [INFO] WebApp:191 - Connection restablished
+2025-06-17 18:26:06,975 [INFO] WebApp:194 - Connection lost
+2025-06-17 18:49:22,197 [INFO] WebApp:191 - Connection restablished
