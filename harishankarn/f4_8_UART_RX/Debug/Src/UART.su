@@ -1,4 +1,6 @@
-../Src/UART.c:34:5:_write	32	static
-../Src/UART.c:41:6:usart1_tx_init	8	static
-../Src/UART.c:83:6:usart1_write	16	static
-../Src/UART.c:91:13:uart_set_baudrate	56	static
+../Src/UART.c:36:5:_write	32	static
+../Src/UART.c:43:6:usart1_tx_init	8	static
+../Src/UART.c:82:6:usart1_rxtx_init	8	static
+../Src/UART.c:128:6:usart1_read	4	static
+../Src/UART.c:136:6:usart1_write	16	static
+../Src/UART.c:144:13:uart_set_baudrate	56	static
