@@ -1,0 +1,10 @@
+16:39:31 **** Incremental Build of configuration Debug for project f4_7_UART_modular ****
+make -j7 all 
+arm-none-eabi-size  f4_7_UART_modular.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7704	     92	   1900	   9696	   25e0	f4_7_UART_modular.elf
+Finished building: default.size.stdout
+ 
+
+16:39:31 Build Finished. 0 errors, 0 warnings. (took 202ms)
+

@@ -59,8 +59,8 @@ all: main-build
 main-build: f4_5_UART_TX.elf secondary-outputs
 
 # Tool invocations
-f4_5_UART_TX.elf f4_5_UART_TX.map: $(OBJS) $(USER_OBJS) /Users/harishankar/Desktop/Baremetal_workspace/f4_5_UART_TX/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "f4_5_UART_TX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/harishankar/Desktop/Baremetal_workspace/f4_5_UART_TX/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f4_5_UART_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+f4_5_UART_TX.elf f4_5_UART_TX.map: $(OBJS) $(USER_OBJS) /Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_5_UART_TX/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "f4_5_UART_TX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_5_UART_TX/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f4_5_UART_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

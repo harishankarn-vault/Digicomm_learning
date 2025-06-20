@@ -1,0 +1,4 @@
+../Src/UART.c:34:5:_write	2
+../Src/UART.c:41:6:usart1_tx_init	1
+../Src/UART.c:83:6:usart1_write	2
+../Src/UART.c:91:13:uart_set_baudrate	2
