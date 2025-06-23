@@ -1,0 +1,13 @@
+/*
+ * ADC.h
+ *
+ *  Created on: Jun 23, 2025
+ *      Author: harishankar
+ */
+
+#ifndef ADC_H_
+#define ADC_H_
+
+void pa1_adc_init();
+
+#endif /* ADC_H_ */

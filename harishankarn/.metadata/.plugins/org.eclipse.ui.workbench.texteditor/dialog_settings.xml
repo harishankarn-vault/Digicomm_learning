@@ -3,6 +3,7 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="SR_TXE"/>
 		<item value="USART2"/>
 		<item value="Fck"/>
 		<item value="USART_Typedef"/>
@@ -17,7 +18,6 @@
 		<item value="RCC_APB2EN_R"/>
 		<item value="GPIOC"/>
 		<item value="AHB2PERIPH"/>
-		<item value="APB2PERIPH"/>
 	</list>
 	<list key="replacehistory">
 		<item value="SYS_FREQ"/>

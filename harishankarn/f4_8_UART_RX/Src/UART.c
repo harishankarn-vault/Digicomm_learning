@@ -1,5 +1,5 @@
 #include "UART.h"
-#define GPIOAEN   		(1U<<0) // Enable clock for GPIOA
+#define GPIOAEN   		(1U<<0) // Enable clock for GPIOA from AHB1 bus
 #define USART1EN  		(1U<<4)	// USART1  @ GPIOA : PA09 & PA10
 
 #define SYS_FREQ		16000000

@@ -1,0 +1,13 @@
+/*	ADC implementation
+ *	Board : STM32F429ZI
+ *	Address Bus : APB2 90 MHZ @ USART1
+ *
+ *	ADC implementation and for this we check pin definition in data sheet
+ *	ADC123_IN1 : PA1
+ */
+#define "ADC.h"
+#define ADC1EN (1U<<8)
+
+void pa1_adc_init(){
+
+}
