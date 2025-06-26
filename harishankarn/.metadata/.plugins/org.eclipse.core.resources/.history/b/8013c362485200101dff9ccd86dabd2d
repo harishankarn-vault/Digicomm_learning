@@ -1,0 +1,12 @@
+/* Implementing timer function
+ *
+ * Datasheet Block diagram : TIM2 APB2 bus
+ *
+ * */
+
+#include "timer.h"
+
+
+int main(){
+	return 0;
+}

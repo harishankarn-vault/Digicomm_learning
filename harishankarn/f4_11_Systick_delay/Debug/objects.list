@@ -1,0 +1,8 @@
+"./Src/ADC.o"
+"./Src/LED.o"
+"./Src/UART.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Src/systick.o"
+"./Startup/startup_stm32f429zitx.o"

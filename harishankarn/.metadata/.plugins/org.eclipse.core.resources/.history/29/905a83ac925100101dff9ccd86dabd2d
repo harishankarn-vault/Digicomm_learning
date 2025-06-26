@@ -1,0 +1,32 @@
+// Find where the led is connected to the board in schematic
+// Board : STM32F429ZI
+// Port: Port G
+// Pin: 13 [MODER bit 27:26]
+// Address Bus : AHB1 180 MHZ @ GPIO - G
+
+// address G start : 0x4002 1800
+// address G end : 0x4002 1BFF
+
+// AHB1 start : 0x4002 0000
+// AHB1 end : 0x4001 3FFF
+
+// RCC base : 0x4002 3800 - 0x4002 3BFF
+
+#include "stm32f4xx.h"	// STM32F4 library
+#define GPIOGEN (1U<<6)
+#define LED_PIN	(1U<<13)
+
+int main(){
+	/*Enable clock for GPIOG*/
+	RCC->AHB1ENR |= GPIOGEN;
+
+	/*Setting to GPIO mode*/
+	GPIOG->MODER &= ~(0b00<<(13*2));
+	GPIOG->MODER |= 0b01<<(13*2);
+
+	while(1){
+		GPIOG->ODR ^= LED_PIN;
+		for(int i = 0; i < 100000; i++);
+	}
+	return 0;
+}

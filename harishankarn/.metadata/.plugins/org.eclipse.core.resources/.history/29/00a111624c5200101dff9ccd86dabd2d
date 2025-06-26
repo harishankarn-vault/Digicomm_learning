@@ -1,0 +1,8 @@
+#ifndef TIMER_H_
+#define TIMER_H_
+#include "stm32f4xx.h"
+
+void tim2_1hz_init(void);
+#define TIM2_SR_UIF	(1U<<0);
+
+#endif /* TIMER_H_ */
