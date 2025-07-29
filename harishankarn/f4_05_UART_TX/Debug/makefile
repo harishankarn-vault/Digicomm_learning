@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := f4_5_UART_TX
+BUILD_ARTIFACT_NAME := f4_05_UART_TX
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-f4_5_UART_TX.elf \
+f4_05_UART_TX.elf \
 
 MAP_FILES += \
-f4_5_UART_TX.map \
+f4_05_UART_TX.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-f4_5_UART_TX.list \
+f4_05_UART_TX.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: f4_5_UART_TX.elf secondary-outputs
+main-build: f4_05_UART_TX.elf secondary-outputs
 
 # Tool invocations
-f4_5_UART_TX.elf f4_5_UART_TX.map: $(OBJS) $(USER_OBJS) /Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_5_UART_TX/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "f4_5_UART_TX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_5_UART_TX/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f4_5_UART_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+f4_05_UART_TX.elf f4_05_UART_TX.map: $(OBJS) $(USER_OBJS) /Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_05_UART_TX/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "f4_05_UART_TX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_05_UART_TX/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f4_05_UART_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-f4_5_UART_TX.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "f4_5_UART_TX.list"
+f4_05_UART_TX.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "f4_05_UART_TX.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout f4_5_UART_TX.elf f4_5_UART_TX.list f4_5_UART_TX.map
+	-$(RM) default.size.stdout f4_05_UART_TX.elf f4_05_UART_TX.list f4_05_UART_TX.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

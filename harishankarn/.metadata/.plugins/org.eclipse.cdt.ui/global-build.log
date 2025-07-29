@@ -1,14 +1,66 @@
-10:44:25 **** Incremental Build of configuration Debug for project f4_12_Timer ****
+18:21:25 **** Incremental Build of configuration Debug for project f4_05_UART_TX ****
 make -j7 all 
-arm-none-eabi-size  f4_12_Timer.elf 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "f4_05_UART_TX.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_05_UART_TX/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f4_05_UART_TX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: f4_05_UART_TX.elf
+ 
+arm-none-eabi-size  f4_05_UART_TX.elf 
+arm-none-eabi-objdump -h -S f4_05_UART_TX.elf  > "f4_05_UART_TX.list"
    text	   data	    bss	    dec	    hex	filename
-   7896	     92	   1900	   9888	   26a0	f4_12_Timer.elf
+   3508	      0	   1568	   5076	   13d4	f4_05_UART_TX.elf
 Finished building: default.size.stdout
  
-10:44:32 **** Incremental Build of configuration Debug for project f4_12_Timer ****
+Finished building: f4_05_UART_TX.list
+ 
+18:21:28 **** Incremental Build of configuration Debug for project f4_05_UART_TX ****
 make -j7 all 
-arm-none-eabi-size  f4_12_Timer.elf 
+arm-none-eabi-size  f4_05_UART_TX.elf 
    text	   data	    bss	    dec	    hex	filename
-   7896	     92	   1900	   9888	   26a0	f4_12_Timer.elf
+   3508	      0	   1568	   5076	   13d4	f4_05_UART_TX.elf
 Finished building: default.size.stdout
+ 
+18:22:59 **** Build of configuration Debug for project f4_06_UART_printf ****
+make -j7 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f429zitx.d" -MT"Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f429zitx.o" "../Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "f4_06_UART_printf.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_06_UART_printf/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f4_06_UART_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: f4_06_UART_printf.elf
+ 
+arm-none-eabi-size  f4_06_UART_printf.elf 
+arm-none-eabi-objdump -h -S f4_06_UART_printf.elf  > "f4_06_UART_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   7704	     92	   1900	   9696	   25e0	f4_06_UART_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: f4_06_UART_printf.list
+ 
+18:24:06 **** Incremental Build of configuration Debug for project f4_15_InputInterrupt ****
+make -j7 all 
+arm-none-eabi-size  f4_15_InputInterrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7924	     92	   1900	   9916	   26bc	f4_15_InputInterrupt.elf
+Finished building: default.size.stdout
+ 
+18:26:31 **** Incremental Build of configuration Debug for project f4_15_InputInterrupt ****
+make -j7 all 
+arm-none-eabi-size  f4_15_InputInterrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7924	     92	   1900	   9916	   26bc	f4_15_InputInterrupt.elf
+Finished building: default.size.stdout
+ 
+18:27:13 **** Incremental Build of configuration Debug for project f4_15_InputInterrupt ****
+make -j7 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "f4_15_InputInterrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/harishankar/Desktop/Digicomm_learning/harishankarn/f4_15_InputInterrupt/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f4_15_InputInterrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: f4_15_InputInterrupt.elf
+ 
+arm-none-eabi-size  f4_15_InputInterrupt.elf 
+arm-none-eabi-objdump -h -S f4_15_InputInterrupt.elf  > "f4_15_InputInterrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   7924	     92	   1900	   9916	   26bc	f4_15_InputInterrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: f4_15_InputInterrupt.list
  

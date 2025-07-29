@@ -1,0 +1,20 @@
+/*
+ * exti.c
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: harishankar
+ */
+
+
+#include "exti.h"
+
+void pc_13_exti_init(void){
+	/*Disable global interrupt*/
+	__disable_irq();
+
+	/*Enable Clock access to GPIOC*/
+	RCC->APB1ENR |=  ;
+
+	/*Enable global interrupt*/
+	__enable_irq();
+}

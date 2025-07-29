@@ -1,0 +1,141 @@
+17:54:03 **** Incremental Build of configuration Debug for project LCD_test ****
+make -j7 all 
+arm-none-eabi-gcc "../Src/stm32f4xx_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f4xx_gpio.d" -MT"Src/stm32f4xx_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f4xx_gpio.o"
+arm-none-eabi-gcc "../Src/stm32f4xx_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f4xx_spi.d" -MT"Src/stm32f4xx_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f4xx_spi.o"
+arm-none-eabi-gcc "../Src/tm_stm32f4_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tm_stm32f4_dma.d" -MT"Src/tm_stm32f4_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tm_stm32f4_dma.o"
+arm-none-eabi-gcc "../Src/tm_stm32f4_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tm_stm32f4_rcc.d" -MT"Src/tm_stm32f4_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tm_stm32f4_rcc.o"
+arm-none-eabi-gcc "../Src/tm_stm32f4_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tm_stm32f4_spi.d" -MT"Src/tm_stm32f4_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tm_stm32f4_spi.o"
+arm-none-eabi-gcc "../Src/tm_stm32f4_spi_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -DSTM32F429xx -c -I../Inc -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Include -I/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tm_stm32f4_spi_dma.d" -MT"Src/tm_stm32f4_spi_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tm_stm32f4_spi_dma.o"
+../Src/stm32f4xx_spi.c:182: warning: "SPI_CR2_FRF" redefined
+  182 | #define SPI_CR2_FRF               ((uint16_t)0x0010)
+      | 
+In file included from /Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:140,
+                 from ../Inc/stm32f4xx_spi.h:38,
+                 from ../Src/stm32f4xx_spi.c:159:
+/Users/harishankar/Desktop/Digicomm_learning/harishankarn/chip_headers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h:13012: note: this is the location of the previous definition
+13012 | #define SPI_CR2_FRF                 SPI_CR2_FRF_Msk                            /*!<Frame Format                         */
+      | 
+../Src/stm32f4xx_gpio.c: In function 'GPIO_Init':
+../Src/stm32f4xx_gpio.c:192:3: warning: implicit declaration of function 'assert_param' [-Wimplicit-function-declaration]
+  192 |   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+      |   ^~~~~~~~~~~~
+../Src/tm_stm32f4_dma.c: In function 'TM_DMA_EnableInterrupts':
+../Src/tm_stm32f4_dma.c:104:9: error: unknown type name 'NVIC_InitTypeDef'
+  104 |         NVIC_InitTypeDef NVIC_InitStruct;
+      |         ^~~~~~~~~~~~~~~~
+../Src/tm_stm32f4_dma.c:113:32: error: request for member 'NVIC_IRQChannelPreemptionPriority' in something not a structure or union
+  113 |                 NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = DMA1_NVIC_PREEMPTION_PRIORITY;
+      |                                ^
+../Src/tm_stm32f4_dma.c:114:32: error: request for member 'NVIC_IRQChannel' in something not a structure or union
+  114 |                 NVIC_InitStruct.NVIC_IRQChannel = DMA_IRQs[0][stream_number];
+      |                                ^
+../Src/tm_stm32f4_dma.c:117:32: error: request for member 'NVIC_IRQChannelPreemptionPriority' in something not a structure or union
+  117 |                 NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = DMA2_NVIC_PREEMPTION_PRIORITY;
+      |                                ^
+../Src/tm_stm32f4_dma.c:118:32: error: request for member 'NVIC_IRQChannel' in something not a structure or union
+  118 |                 NVIC_InitStruct.NVIC_IRQChannel = DMA_IRQs[1][stream_number];
+      |                                ^
+../Src/tm_stm32f4_dma.c:122:24: error: request for member 'NVIC_IRQChannelCmd' in something not a structure or union
+  122 |         NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+      |                        ^
+../Src/tm_stm32f4_dma.c:123:24: error: request for member 'NVIC_IRQChannelSubPriority' in something not a structure or union
+  123 |         NVIC_InitStruct.NVIC_IRQChannelSubPriority = stream_number;
+      |                        ^
+../Src/stm32f4xx_gpio.c: In function 'GPIO_SetBits':
+../Src/stm32f4xx_gpio.c:391:10: error: 'GPIO_TypeDef' has no member named 'BSRRL'; did you mean 'BSRR'?
+  391 |   GPIOx->BSRRL = GPIO_Pin;
+      |          ^~~~~
+      |          BSRR
+../Src/stm32f4xx_gpio.c: In function 'GPIO_ResetBits':
+../Src/stm32f4xx_gpio.c:410:10: error: 'GPIO_TypeDef' has no member named 'BSRRH'; did you mean 'BSRR'?
+  410 |   GPIOx->BSRRH = GPIO_Pin;
+      |          ^~~~~
+      |          BSRR
+../Src/stm32f4xx_gpio.c: In function 'GPIO_WriteBit':
+../Src/stm32f4xx_gpio.c:433:12: error: 'GPIO_TypeDef' has no member named 'BSRRL'; did you mean 'BSRR'?
+  433 |     GPIOx->BSRRL = GPIO_Pin;
+      |            ^~~~~
+      |            BSRR
+../Src/stm32f4xx_gpio.c:437:12: error: 'GPIO_TypeDef' has no member named 'BSRRH'; did you mean 'BSRR'?
+  437 |     GPIOx->BSRRH = GPIO_Pin ;
+      |            ^~~~~
+      |            BSRR
+../Src/tm_stm32f4_dma.c:126:9: warning: implicit declaration of function 'NVIC_Init' [-Wimplicit-function-declaration]
+  126 |         NVIC_Init(&NVIC_InitStruct);
+      |         ^~~~~~~~~
+../Src/stm32f4xx_spi.c: In function 'SPI_I2S_DeInit':
+../Src/stm32f4xx_spi.c:227:3: warning: implicit declaration of function 'assert_param' [-Wimplicit-function-declaration]
+  227 |   assert_param(IS_SPI_ALL_PERIPH(SPIx));
+      |   ^~~~~~~~~~~~
+make: *** [Src/subdir.mk:58: Src/stm32f4xx_gpio.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:58: Src/tm_stm32f4_dma.o] Error 1
+../Src/tm_stm32f4_spi.c: In function 'TM_SPI_GetPrescalerFromMaxFrequency':
+../Src/tm_stm32f4_spi.c:140:9: error: unknown type name 'RCC_ClocksTypeDef'; did you mean 'SAI_Block_TypeDef'?
+  140 |         RCC_ClocksTypeDef RCC_Clocks;
+      |         ^~~~~~~~~~~~~~~~~
+      |         SAI_Block_TypeDef
+../Src/stm32f4xx_spi.c:232:5: warning: implicit declaration of function 'RCC_APB2PeriphResetCmd' [-Wimplicit-function-declaration]
+  232 |     RCC_APB2PeriphResetCmd(RCC_APB2Periph_SPI1, ENABLE);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+../Src/tm_stm32f4_spi.c:150:9: warning: implicit declaration of function 'RCC_GetClocksFreq' [-Wimplicit-function-declaration]
+  150 |         RCC_GetClocksFreq(&RCC_Clocks);
+      |         ^~~~~~~~~~~~~~~~~
+../Src/tm_stm32f4_spi.c:167:43: error: request for member 'PCLK2_Frequency' in something not a structure or union
+  167 |                 APB_Frequency = RCC_Clocks.PCLK2_Frequency;
+      |                                           ^
+../Src/tm_stm32f4_spi.c:169:43: error: request for member 'PCLK1_Frequency' in something not a structure or union
+  169 |                 APB_Frequency = RCC_Clocks.PCLK1_Frequency;
+      |                                           ^
+../Src/stm32f4xx_spi.c:232:28: error: 'RCC_APB2Periph_SPI1' undeclared (first use in this function); did you mean 'RCC_APB2RSTR_SPI1'?
+  232 |     RCC_APB2PeriphResetCmd(RCC_APB2Periph_SPI1, ENABLE);
+      |                            ^~~~~~~~~~~~~~~~~~~
+      |                            RCC_APB2RSTR_SPI1
+../Src/stm32f4xx_spi.c:232:28: note: each undeclared identifier is reported only once for each function it appears in
+../Src/tm_stm32f4_spi.c: In function 'TM_SPI4_INT_InitPins':
+../Src/tm_stm32f4_spi.c:524:143: error: 'GPIO_AF_SPI4' undeclared (first use in this function); did you mean 'GPIO_AF_SPI3'?
+  524 |                 TM_GPIO_InitAlternate(GPIOE, GPIO_PIN_2 | GPIO_PIN_5 | GPIO_PIN_6, TM_GPIO_OType_PP, TM_GPIO_PuPd_NOPULL, TM_GPIO_Speed_High, GPIO_AF_SPI4);
+      |                                                                                                                                               ^~~~~~~~~~~~
+      |                                                                                                                                               GPIO_AF_SPI3
+../Src/tm_stm32f4_spi.c:524:143: note: each undeclared identifier is reported only once for each function it appears in
+../Src/tm_stm32f4_spi.c: In function 'TM_SPI5_INT_InitPins':
+../Src/tm_stm32f4_spi.c:544:143: error: 'GPIO_AF_SPI5' undeclared (first use in this function); did you mean 'GPIO_AF_SPI3'?
+  544 |                 TM_GPIO_InitAlternate(GPIOF, GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9, TM_GPIO_OType_PP, TM_GPIO_PuPd_NOPULL, TM_GPIO_Speed_High, GPIO_AF_SPI5);
+      |                                                                                                                                               ^~~~~~~~~~~~
+      |                                                                                                                                               GPIO_AF_SPI3
+../Src/tm_stm32f4_spi.c: In function 'TM_SPI6_INT_InitPins':
+../Src/tm_stm32f4_spi.c:565:146: error: 'GPIO_AF_SPI6' undeclared (first use in this function); did you mean 'GPIO_AF_SPI3'?
+  565 |                 TM_GPIO_InitAlternate(GPIOG, GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14, TM_GPIO_OType_PP, TM_GPIO_PuPd_NOPULL, TM_GPIO_Speed_High, GPIO_AF_SPI6);
+      |                                                                                                                                                  ^~~~~~~~~~~~
+      |                                                                                                                                                  GPIO_AF_SPI3
+make: *** [Src/subdir.mk:58: Src/tm_stm32f4_spi.o] Error 1
+../Src/stm32f4xx_spi.c:239:5: warning: implicit declaration of function 'RCC_APB1PeriphResetCmd' [-Wimplicit-function-declaration]
+  239 |     RCC_APB1PeriphResetCmd(RCC_APB1Periph_SPI2, ENABLE);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+../Src/stm32f4xx_spi.c:239:28: error: 'RCC_APB1Periph_SPI2' undeclared (first use in this function)
+  239 |     RCC_APB1PeriphResetCmd(RCC_APB1Periph_SPI2, ENABLE);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Src/stm32f4xx_spi.c:246:28: error: 'RCC_APB1Periph_SPI3' undeclared (first use in this function)
+  246 |     RCC_APB1PeriphResetCmd(RCC_APB1Periph_SPI3, ENABLE);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Src/stm32f4xx_spi.c:254:28: error: 'RCC_APB2Periph_SPI4' undeclared (first use in this function); did you mean 'RCC_APB2RSTR_SPI1'?
+  254 |     RCC_APB2PeriphResetCmd(RCC_APB2Periph_SPI4, ENABLE);
+      |                            ^~~~~~~~~~~~~~~~~~~
+      |                            RCC_APB2RSTR_SPI1
+../Src/stm32f4xx_spi.c:263:28: error: 'RCC_APB2Periph_SPI5' undeclared (first use in this function); did you mean 'RCC_APB2RSTR_SPI1'?
+  263 |     RCC_APB2PeriphResetCmd(RCC_APB2Periph_SPI5, ENABLE);
+      |                            ^~~~~~~~~~~~~~~~~~~
+      |                            RCC_APB2RSTR_SPI1
+../Src/stm32f4xx_spi.c:272:28: error: 'RCC_APB2Periph_SPI6' undeclared (first use in this function); did you mean 'RCC_APB2RSTR_SPI1'?
+  272 |     RCC_APB2PeriphResetCmd(RCC_APB2Periph_SPI6, ENABLE);
+      |                            ^~~~~~~~~~~~~~~~~~~
+      |                            RCC_APB2RSTR_SPI1
+../Src/stm32f4xx_spi.c: In function 'I2S_Init':
+../Src/stm32f4xx_spi.c:430:27: error: 'HSE_VALUE' undeclared (first use in this function)
+  430 |     i2sclk = (uint32_t)(((HSE_VALUE / pllm) * plln) / pllr);
+      |                           ^~~~~~~~~
+make: *** [Src/subdir.mk:58: Src/stm32f4xx_spi.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+
+17:54:04 Build Failed. 29 errors, 7 warnings. (took 686ms)
+

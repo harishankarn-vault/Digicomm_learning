@@ -32,7 +32,7 @@
 
 #define SR_TXE			(1U<<7)
 
-#define UART_BAUDRATE	9600
+#define UART_BAUDRATE	115200
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t periph_clk, uint32_t baudrate);
 void usart1_write(int ch);

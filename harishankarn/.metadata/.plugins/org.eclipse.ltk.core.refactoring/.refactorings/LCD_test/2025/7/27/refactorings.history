@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;LCD_test/Src/stm32f4_rcc.c&apos; to &apos;stm32f4xx_rcc.c&apos;" description="Rename resource &apos;stm32f4_rcc.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/stm32f4_rcc.c" name="stm32f4xx_rcc.c" stamp="1751544337362" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;LCD_test/Inc/stm32f4_rcc.h&apos; to &apos;stm32f4xx_rcc.h&apos;" description="Rename resource &apos;stm32f4_rcc.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/stm32f4_rcc.h" name="stm32f4xx_rcc.h" stamp="1751544347194" updateReferences="true"/>
+</session>

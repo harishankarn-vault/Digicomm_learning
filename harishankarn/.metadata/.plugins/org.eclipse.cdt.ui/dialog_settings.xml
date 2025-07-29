@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<item key="LastUsedSourceTemplate" value="Default C source template"/>
 	<item key="LastUsedHeaderTemplate" value="Default C header template"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="USE_STDPERIPH_DRIVER&#x0A;"/>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
@@ -11,6 +12,7 @@
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="askReindex.detail" value="0"/>
+		<item key="askReindex" value="true"/>
 	</section>
 	<section name="NewSourceFileCreationWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="427"/>

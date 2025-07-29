@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
-	<item key="replaceBarOpen" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="spi5"/>
+		<item value="spi4"/>
+		<item value="spi3"/>
+		<item value="spi2"/>
+		<item value="spi1"/>
+		<item value="STM32F429_439xx"/>
+		<item value="stm32f429zi"/>
+		<item value="null"/>
+		<item value="stm32f4 series"/>
 		<item value="SR_TXE"/>
 		<item value="USART2"/>
 		<item value="Fck"/>
 		<item value="USART_Typedef"/>
 		<item value="stm32f429"/>
 		<item value="STM32F429"/>
-		<item value="STM32F429ZI"/>
-		<item value="GPIOG"/>
-		<item value="AHB1"/>
-		<item value="GPIOB"/>
-		<item value="IOPCEN"/>
-		<item value="APB2EN_R_OFFSET"/>
-		<item value="RCC_APB2EN_R"/>
-		<item value="GPIOC"/>
-		<item value="AHB2PERIPH"/>
 	</list>
 	<list key="replacehistory">
 		<item value="SYS_FREQ"/>

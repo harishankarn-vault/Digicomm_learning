@@ -1,0 +1,3 @@
+../Src/tm_stm32f4_rcc.c:21:6:TM_RCC_SetPLL	32	static
+../Src/tm_stm32f4_rcc.c:78:6:TM_RCC_GetPLL	16	static
+../Src/tm_stm32f4_rcc.c:87:9:TM_RCC_IsPLLReady	4	static
