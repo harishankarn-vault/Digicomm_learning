@@ -38,8 +38,9 @@ int main(void){
 
 static void exti_callback(){
 	printf("button pressed\n\r");
-	for(int i=0;i<1000000;i++){}
-	LED_ON();
+	LED_init();
+	LED_toggle(1000000);
+	//for(int i=0;i<1000000;i++){}
 }
 
 void EXTI0_IRQHandler(void){

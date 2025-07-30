@@ -21,5 +21,5 @@ void LED_OFF(){
 
 void LED_toggle(int delay){
 	GPIOG->ODR ^= LED_PIN;
-	for(volatile int i=0;i<=delay;i++);
+	//for(volatile int i=0;i<=delay;i++);
 }
