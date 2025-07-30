@@ -37,16 +37,15 @@ int main(void){
 }
 
 static void exti_callback(){
-	printf("button pressed");
+	printf("button pressed\n\r");
+	for(int i=0;i<1000000;i++){}
 	LED_ON();
 }
 
 void EXTI0_IRQHandler(void){
-	if((EXTI->PR != LINE0) != 0){
-		/*clear PR flag*/
-		 EXTI->PR |= LINE0;
-		 exti_callback();
-
+	if(EXTI->PR & LINE0){
+		EXTI->PR |= LINE0;  // Clear interrupt flag by writing 1
+		exti_callback();    // Your custom logic
 	}
 }
 
