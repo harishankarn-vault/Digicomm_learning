@@ -5,15 +5,17 @@
 #define SYS_FREQ		16000000
 #define APB2_CLK		SYS_FREQ
 
-#define CR1_TE			(1U<<3)
-#define CR1_RE 			(1U<<2)
-#define CR1_UE			(1U<<13)
+#define CR1_TE			(1U<<3) //Transmitter enable
+#define CR1_RE 			(1U<<2) // Receiver enable
+#define CR1_UE			(1U<<13) // USART enable
 
 #define SR_TXE			(1U<<7)
 
 #define UART_BAUDRATE	115200
 
-#define CR1_RXNEIE		(1U<<5)
+#define CR1_RXNEIE		(1U<<5) // RXE interrupt enable
+#define CR1_TXEIE		(1U<<7) // TXE interrupt enable
+
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t periph_clk, uint32_t baudrate);
 void usart1_write(int ch);
@@ -41,27 +43,16 @@ int _write(int file, char *ptr, int len) { // All correct arguments are passed b
     return len;
 }
 
-void usart1_tx_init(void){
+void usart1_tx_interrupt_init(void){
 	/************Configure USART GPIO pins***********/
 	/*Enable clock access to GPIOA*/
 	RCC->AHB1ENR |= GPIOAEN;
 
-	/*Set PA09 to alternate function mode*/
+	/*Set PA09 to alternate function mode - Transfer*/
 	GPIOA->MODER &= ~(1U<<18);
 	GPIOA->MODER |= (1U<<19);
 
-	/*Set PA09 & PA10 to alternate function type to UART_TX (AF7)*/
-	/* Notes :
-	 * 	- Pin number corresponds to x in AFRHx
-	 * 	- All pin 1 are in AFRL1
-	 * 	- All pin 9 are in AFRH9
-	 */
-
-	/* Note : There is no AFRL/AFRH in ST header, instead
-	 * AFR[0] = AFRL
-	 * AFR[1] = AFRH
-	 */
-
+	/*Setting for PA09 - Transfer*/
 	GPIOA->AFR[1] &= ~(0xFU<<4);
 	GPIOA->AFR[1] |=  (0x7U<<4);
 
@@ -73,75 +64,33 @@ void usart1_tx_init(void){
 	uart_set_baudrate(USART1,APB2_CLK,UART_BAUDRATE);
 
 	/*Configure transfer direction*/
-	/* For transmission */
-	USART1->CR1 = CR1_TE;
+	/* For transmission*/
+	USART1->CR1 |= (CR1_TE);
+
+	/*Interrupt section*/
+	/*Enable TXEIE*/
+	USART1->CR1 |= (CR1_TXEIE);
+
+	/*Enabling NVIC*/
+	NVIC_EnableIRQ(USART1_IRQn);
 
 	/*Enable USART module*/
 	USART1->CR1 |= CR1_UE;
+
+
 }
-
-void usart1_rxtx_init(void){
-	/************Configure USART GPIO pins***********/
-	/*Enable clock access to GPIOA*/
-	RCC->AHB1ENR |= GPIOAEN;
-
-	/*Set PA09 & PA10 to alternate function mode*/
-	GPIOA->MODER &= ~(1U<<18);
-	GPIOA->MODER |= (1U<<19);
-
-	/*Set PA10 to alternate function mode*/
-	GPIOA->MODER &= ~(1U<<20);
-	GPIOA->MODER |= (1U<<21);
-
-	/*Set PA09 & PA10 to alternate function type to UART_TX (AF7)*/
-	/* Notes :
-	 * 	- Pin number corresponds to x in AFRHx
-	 * 	- All pin 1 are in AFRL1
-	 * 	- All pin 9 are in AFRH9
-	 */
-
-	/* Note : There is not AFRL/AFRH in ST header, instead
-	 * AFR[0] = AFRL
-	 * AFR[1] = AFRH
-	 */
-
-	GPIOA->AFR[1] &= ~(0xFU<<4);
-	GPIOA->AFR[1] |=  (0x7U<<4);
-
-	GPIOA->AFR[1] &= ~(0xFU<<8);
-	GPIOA->AFR[1] |=  (0x7U<<8);
-
-	/************Configure USART Module***********/
-	/*Enable clock access to USART1*/
-	RCC->APB2ENR |= USART1EN;
-
-	/*Configure USART Baud rate*/
-	uart_set_baudrate(USART1,APB2_CLK,UART_BAUDRATE);
-
-	/*Configure transfer direction*/
-	/* For transmission & receiver*/
-	USART1->CR1 = (CR1_TE | CR1_RE);
-
-	/*Enable USART module*/
-	USART1->CR1 |= CR1_UE;
-}
-
 void usart1_rx_interrupt_init(void){
 	/************Configure USART GPIO pins***********/
 	/*Enable clock access to GPIOA*/
 	RCC->AHB1ENR |= GPIOAEN;
 
-	/*Set PA09 to alternate function mode - tranfer*/
-	GPIOA->MODER &= ~(1U<<18);
-	GPIOA->MODER |= (1U<<19);
-
-	/*Set PA10 to alternate function mode - reciever*/
+	/*Set PA10 to alternate function mode - Receiver*/
 	GPIOA->MODER &= ~(1U<<20);
 	GPIOA->MODER |= (1U<<21);
 
 	/*Set PA09 & PA10 to alternate function type to UART_TX (AF7)*/
 	/* Notes :
-	 * 	- Pin number corresponds to x in AFRHx
+	 * 	- Pin number corresponds to x in AFRL/Hx
 	 * 	- All pin 1 are in AFRL1
 	 * 	- All pin 9 are in AFRH9
 	 */
@@ -151,11 +100,10 @@ void usart1_rx_interrupt_init(void){
 	 * AFR[1] = AFRH
 	 */
 
-	GPIOA->AFR[1] &= ~(0xFU<<4);
-	GPIOA->AFR[1] |=  (0x7U<<4);
-
+	/*Setting for PA10 - Receiver */
 	GPIOA->AFR[1] &= ~(0xFU<<8);
 	GPIOA->AFR[1] |=  (0x7U<<8);
+
 
 	/************Configure USART Module***********/
 	/*Enable clock access to USART1*/
@@ -165,8 +113,8 @@ void usart1_rx_interrupt_init(void){
 	uart_set_baudrate(USART1,APB2_CLK,UART_BAUDRATE);
 
 	/*Configure transfer direction*/
-	/* For transmission & receiver*/
-	USART1->CR1 = (CR1_TE | CR1_RE);
+	/* For receiver*/
+	USART1->CR1 |= (CR1_RE);
 
 	/*Interrupt section*/
 	/*Enable RXNEIE*/

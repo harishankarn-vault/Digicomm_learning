@@ -29,26 +29,15 @@ char key;
 
 int main(void){
 	usart1_rx_interrupt_init();
-	/* 1. Enable clock access to GPIOG */
-	RCC->AHB1ENR |= GPIOGEN;
-
-	/* 2. set PG13 as output pin */
-	GPIOG->MODER |= (1U<<26); 	// sets only Bit 26 to one
-	GPIOG->MODER &= ~(1U<<27);	// sets only Bit 27 to zero
-
+	usart1_tx_interrupt_init();
 	while(1)
 	{
 	}
 }
 
 void USART_callback(){
-	key = USART1->DR;
-			if (key == '1'){
-				GPIOG->ODR |=  LED_PIN;
-			}
-			else{
-				GPIOG->ODR &=  ~LED_PIN;
-			}
+	key = USART1->DR; // get character
+	USART1->DR = key; // sends back character
 }
 void USART1_IRQHandler(void){
 	/*Check if RXNE is set*/
